@@ -38,11 +38,19 @@ class Employee
         int fullDayHour = 8;
         int wage = fullDayHour * WAGE_PER_HOUR;
         System.out.println("Employee full Daily wage is "+wage);
+        wagePerMonth(wage);
     }
     public void partCalculateWage(){
         int halfDayHour = 4;
         int wage = halfDayHour * WAGE_PER_HOUR;
         System.out.println("Employee half Daily wage is "+wage);
+        wagePerMonth(wage);
+    }
+    public void wagePerMonth(int wage){
+        int totalWorkingDays = 20;
+        int wageForMonth = wage * totalWorkingDays;
+        System.out.println("wage per month is "+wageForMonth);
+
     }
 
 }
