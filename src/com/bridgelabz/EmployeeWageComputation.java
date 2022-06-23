@@ -1,7 +1,5 @@
 package com.bridgelabz;
 
-import com.sun.corba.se.spi.activation._ActivatorImplBase;
-
 public class EmployeeWageComputation {
     public static void main(String[] args)
     {
@@ -22,14 +20,18 @@ class Employee
     final int WAGE_PER_HOUR=20;
     public void checkEmployee() {
         int empType =  (int) (Math.random() * 100) % 3;
-        if (empType == FULL_TIME) {
-            System.out.println("Employee is Present with full time");
-            fullCalculateWage();
-        } else if (empType == PART_TIME) {
-            System.out.println("Employee present with part time");
-            partCalculateWage();
-        } else {
-            System.out.println("Employee is absent");
+        switch (empType)
+        {
+            case FULL_TIME:
+                System.out.println("Employee is Present Full time");
+                fullCalculateWage();
+                break;
+            case PART_TIME:
+                System.out.println("Employee is Present Part time");
+                partCalculateWage();
+                break;
+            default:
+                System.out.println("Employee is Absent");
         }
     }
     public void fullCalculateWage(){
